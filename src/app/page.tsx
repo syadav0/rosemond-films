@@ -24,11 +24,18 @@ export default function Home() {
           nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
 
-        <div className='mt-20'>
-        <video loop muted className='w-2/4 brightness-50 z-10'>
-          <source src='/assets/vid1.mp4' type="video/mp4"/>
-          Your browser does not support the video tag.
-        </video>
+        <div className='mt-20 relative flex w-1/2'>
+          {/* add autoPlay tag back */}
+          <video loop muted className='brightness-50 object-cover w-auto z-0'>
+            <source src='/assets/vid1.mp4' type="video/mp4"/>
+            Your browser does not support the video tag.
+          </video>
+
+          <div className='absolute text-2xl w-full h-full flex justify-center items-center
+          opacity-0 hover:opacity-100'>
+            <p className='hover-blink'>[ play ]</p>
+          </div>
+          
         </div>
         
 
