@@ -29,6 +29,7 @@ const Navbar = () => {
           </a>
         </div>
 
+        {/* Mobile view menu */}
         <div className={`fixed top-0 left-0 w-full h-full bg-slate-925 z-10 transform transition duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
           
           <ul className={`font-medium flex flex-col items-center justify-center space-y-8 pt-10 sm:pt-0`}>
@@ -51,17 +52,17 @@ const Navbar = () => {
             </li>
 
             <li>
-              <Link href={"#about"} legacyBehavior>
+              <Link href={"/contact"} legacyBehavior>
                 <a onClick={toggleMenu} className='text-white text-lg hover:bg-transparent 
               hover:text-indigo-400 md:p-0 transition ease-in-out'>
-                  About
+                  Contact
                 </a>
               </Link>
             </li>
 
             <li>
               <button onClick={toggleMenu} className='text-white text-lg hover:bg-transparent hover:text-indigo-400 md:p-0 transition ease-in-out'>
-                Close
+                X
               </button>
             </li>
 
@@ -69,7 +70,8 @@ const Navbar = () => {
 
         </div>
 
-        <ul className="hidden sm:flex flex-col mt-4 sm:flex-row sm:space-x-8 sm:mt-0 sm:border-0">
+        {/* Desktop view menu */}
+        <ul className="hidden md:flex flex-col mt-4 md:flex-row md:space-x-8 sm:mt-0 sm:border-0">
           <li>
             <Link href={"#films"} legacyBehavior>
               <a href="films" className='text-white text-lg hover:bg-transparent 
@@ -80,7 +82,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Link href={"#about"} legacyBehavior>
+            <Link href={"#about"} legacyBehavior scroll={false}>
               <a className='text-white text-lg hover:bg-transparent 
               hover:text-indigo-400 md:p-0 transition ease-in-out'>
                 About
@@ -89,7 +91,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Link href={"#contact"} legacyBehavior>
+            <Link href={"/contact"} legacyBehavior>
               <a className='text-white text-lg hover:bg-transparent 
               hover:text-indigo-400 md:p-0 transition ease-in-out'>
                 Contact

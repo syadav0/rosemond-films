@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
+import Footer from '@/components/Footer'
 
 
 export const metadata: Metadata = {
@@ -10,11 +11,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children, }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`dark:bg-slate-925 text-slate-300 mx-auto`}>
+    <html lang="en" className='scroll-smooth'>
+      <body className={`dark:bg-slate-925 mx-auto scrollbar`}>
         <Navbar />
         
         {children}
+
+        <Footer/>
       </body>
     </html>
   )
