@@ -26,4 +26,4 @@ function useFadeIn(ref: RefObject<HTMLElement>) {
   }, [ref]);
 }
 
-export default useFadeIn;
+export default useFadeIn; 

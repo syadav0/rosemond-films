@@ -5,8 +5,6 @@ import Image from 'next/image';
 import VideoCard from '@/components/VideoCard';
 import useFadeIn from '@/components/FadeIn';
 
-
-
 const description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
 
 export default function Home() {
@@ -18,21 +16,31 @@ export default function Home() {
   useFadeIn(ref2);
   useFadeIn(ref3);
 
+
   return (
     <>
       <div className='text-center'>
         
-        <h1 className={`hidden md:block py-1 pb-3 sm:text-5xl md:text-7xl sm:py-5 font-jost`}>ROSEMOND FILMS</h1>
+        <h1 className='hidden md:block py-1 pb-3 sm:text-5xl md:text-7xl sm:py-5 font-jost'>
+          ROSEMOND FILMS
+        </h1>
         
         {/* add autoPlay tag back */}
-        <div className='aspect-w-9 aspect-h-16'>
-        <video loop muted className='w-full h-full md:object-contain'>
-          <source src='/assets/vid1.mp4' type='video/mp4'/>
-          Your browser does not support the video tag.
-        </video>
+        <div className='flex justify-center items-center font-jost'>
+          <div className='z-10 text-xl md:text-6xl absolute md:w-[50rem] w-[20rem]'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </div>
+          
+          <video autoPlay loop muted className='z-0 h-auto md:object-contain 
+          brightness-75'>
+            <source src='/assets/vid1.mp4' type='video/mp4'/>
+            Your browser does not support the video tag.
+          </video>
+
         </div>
 
 
+        {/* About section */}
         <div ref={ref1} className='fade-in-section'>
           <div id="about" className='mx-auto text-4xl font-jost pt-5 md:pt-10 md:mt-15 mt-8'>
             About
@@ -52,8 +60,6 @@ export default function Home() {
         
           </div>
         </div>
-        
-
 
         <div ref={ref2} className="fade-in-section flex justify-center md:justify-start font-jost">
           <VideoCard 
@@ -75,8 +81,6 @@ export default function Home() {
           />
         </div>
 
-        
-      
       </div>
     </>
   )

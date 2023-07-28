@@ -20,6 +20,7 @@ const VideoCard: React.FC<VideoCardProps> = ({videoSrc, title, desc, flexDirecti
           Your browser does not support the video tag.
         </video>
       </div>
+      
 
       <div className={`md:p-8 p-2 flex items-center text-left md:text-3xl 
       ${text === 'left' ? 'md:text-left' : 'md:text-right'}`}>
