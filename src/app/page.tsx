@@ -66,7 +66,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-x-5 gap-y-5 justify-center">
             <div className="relative w-full md:w-2/4 h-[25rem] overflow-hidden group">
               
-              <video className="z-0 w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src='/assets/vid2.mp4'>
+              <video preload='auto' className="z-0 w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src='/assets/vid2.mp4'>
                 Your browser does not support the video tag.
               </video>
 
@@ -78,7 +78,7 @@ export default function Home() {
           
             <div className="relative w-full md:w-1/4 h-[25rem] overflow-hidden group">
               
-              <video className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src="/assets/vid1.mp4">
+              <video preload='auto' className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src="/assets/vid1.mp4">
                 Your browser does not support the video tag.
               </video>
               
@@ -90,7 +90,7 @@ export default function Home() {
           
             <div className="relative w-full md:w-1/4 h-auto overflow-hidden group">
               
-              <video className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src="/assets/vid1.mp4">
+              <video preload='auto' className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src="/assets/vid1.mp4">
                 Your browser does not support the video tag.
               </video>
               
@@ -104,7 +104,7 @@ export default function Home() {
           
             <div className="relative w-full md:w-2/4 h-auto overflow-hidden group">
               
-              <video className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src="/assets/vid2.mp4">
+              <video preload='auto' className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src="/assets/vid2.mp4">
                 Your browser does not support the video tag.
               </video>
 
