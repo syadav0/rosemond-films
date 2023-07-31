@@ -10,7 +10,7 @@ function useFadeIn(ref: RefObject<HTMLElement>) {
           entry.target.classList.remove('is-visible');
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
 
     if (ref.current) {

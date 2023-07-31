@@ -24,7 +24,7 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-          <a href="/" className="text-xl font-semibold md:hover:text-indigo-400 transition ease-in-out">
+          <a href="/" className="text-xl md:hover:text-indigo-400 transition ease-in-out">
             Rosemond Films
           </a>
         </div>
