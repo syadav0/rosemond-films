@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="dark:bg-slate-925 py-3 font-jost text-white">
+    <nav className="dark:bg-slate-925 py-3 font-jost text-white z-30">
       <div className="flex flex-wrap items-center justify-between mx-auto px-3 max-w-screen-2xl">
         <div className="flex items-center justify-between w-full md:w-auto">
           <div className="block md:hidden">
@@ -30,7 +30,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile view menu */}
-        <div className={`fixed top-0 left-0 w-full h-full bg-slate-925 z-10 transform transition duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
+        <div className={`fixed lg:hidden top-0 left-0 w-full h-full bg-slate-925 z-30 transform transition duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
           
           <ul className={`font-medium flex flex-col items-center justify-center space-y-8 pt-10 sm:pt-0`}>
             <li>

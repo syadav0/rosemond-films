@@ -18,17 +18,22 @@ export default function Home() {
     <>
       <div className='text-center text-white'>
         
-        <h1 className='hidden md:block py-1 pb-3 sm:text-5xl md:text-7xl sm:py-5 font-jost'>
+        <h1 className='hidden md:block py-4 sm:text-5xl md:text-7xl sm:py-5 font-jost'>
           ROSEMOND FILMS
         </h1>
         
         <div className='flex justify-center items-center font-jost'>
-          <div className='z-10 text-xl md:text-6xl absolute md:w-[50rem] w-[20rem]'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          <div className='z-10 text-3xl md:text-4xl lg:text-6xl absolute md:w-[50rem] w-[25rem]'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </div>
+
+          <svg className="fill-white z-10 h-16 w-16 mt-64 md:h-20 md:w-20 absolute md:mt-96 float_arrow" 
+            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"> 
+            <path d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"></path> 
+          </svg>
+
           
-          <video autoPlay loop muted className='z-0 h-auto md:object-contain 
-          brightness-[0.80]'>
+          <video autoPlay loop muted className='z-0 h-[45rem] object-cover md:h-auto md:scale-100 w-full brightness-[0.80] overflow-hidden'>
             <source src='/assets/vid1.mp4' type='video/mp4'/>
             Your browser does not support the video tag.
           </video>
@@ -38,17 +43,17 @@ export default function Home() {
 
         {/* About section */}
         <div ref={ref1} className='fade-in-section'>
-          <div id="about" className='mx-auto text-4xl font-jost pt-5 md:pt-10 md:mt-15 mt-8'>
+          <div id="about" className='mx-auto text-5xl font-jost pt-5 md:pt-10 md:mt-15 mt-8'>
             About
           </div>
-          <div className='sm:w-4/5 md:3/4 flex items-center flex-col lg:flex-row p-7 lg:px-20 mx-auto mb-5'>
+          <div className='sm:w-3/4 w-11/12 flex items-center flex-col lg:flex-row p-7 lg:px-20 mx-auto lg:divide-x-4 lg:divide-slate-500 divide'>
           
-            <div className='flex-shrink-0 mb-4 md:mb-0 md:mr-4'>
+            <div className='flex-shrink-0 mb-4 md:mb-0 md:mr-5'>
               <Image src={'/assets/pic1.jpg'} alt='profile picture' width={250} 
               height={250} className='rounded-full'/>
             </div>
           
-            <p className='font-jost text-center lg:text-left sm:text-xl md:text-2xl lg:text-3xl'>
+            <p className='font-jost text-center lg:text-left text-xl md:text-2xl md:mt-5 xl:text-4xl lg:px-5'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
               nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -58,8 +63,8 @@ export default function Home() {
         </div>
 
         {/* Films section */}
-        <div ref={ref2} className="inline-block p-5 my-10 font-jost fade-in-section">
-          <div id="about" className='mx-auto text-4xl font-jost m-10'>
+        <div ref={ref2} className="inline-block p-5 font-jost fade-in-section">
+          <div id="about" className='mx-auto text-5xl font-jost m-10'>
             Films
           </div>
         
@@ -116,10 +121,9 @@ export default function Home() {
           </div>
         </div>
 
-        <button className="p-3 m-5 mb-20 hover:bg-white hover:text-slate-925 ease-in-out duration-300 border-[2px] text-white font-jost text-xl" type="submit">
+        <button className="p-3 m-5 hover:bg-white hover:text-slate-925 ease-in-out duration-300 border-[2px] text-white font-jost text-xl mb-40" type="submit">
           View More Films
         </button>
-
 
       </div>
     </>
