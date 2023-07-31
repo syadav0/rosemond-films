@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="dark:bg-slate-925 py-3 font-jost">
+    <nav className="dark:bg-slate-925 py-3 font-jost text-white">
       <div className="flex flex-wrap items-center justify-between mx-auto px-3 max-w-screen-2xl">
         <div className="flex items-center justify-between w-full md:w-auto">
           <div className="block md:hidden">

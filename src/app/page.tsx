@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import Image from 'next/image';
 import VideoCard from '@/components/VideoCard';
 import useFadeIn from '@/components/FadeIn';
@@ -16,10 +16,11 @@ export default function Home() {
   useFadeIn(ref2);
   useFadeIn(ref3);
 
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);  
 
   return (
     <>
-      <div className='text-center'>
+      <div className='text-center text-white'>
         
         <h1 className='hidden md:block py-1 pb-3 sm:text-5xl md:text-7xl sm:py-5 font-jost'>
           ROSEMOND FILMS
@@ -32,7 +33,7 @@ export default function Home() {
           </div>
           
           <video autoPlay loop muted className='z-0 h-auto md:object-contain 
-          brightness-75'>
+          brightness-[0.80]'>
             <source src='/assets/vid1.mp4' type='video/mp4'/>
             Your browser does not support the video tag.
           </video>
@@ -61,25 +62,49 @@ export default function Home() {
           </div>
         </div>
 
-        <div ref={ref2} className="fade-in-section flex justify-center md:justify-start font-jost">
-          <VideoCard 
-            videoSrc='/assets/vid1.mp4'
-            title='Push for Progress' 
-            desc='Short film at the University of Maryland, College Park'
-            flexDirection="row"
-            text="right" 
-          />
+        <div className="inline-block p-5 my-10">
+          <div className="flex flex-wrap gap-x-5 gap-y-5 justify-center">
+            <div className="relative w-full md:w-2/4 h-[25rem] overflow-hidden group">
+              <video className="z-0 w-full h-full object-cover" src='/assets/vid2.mp4'>
+                Your browser does not support the video tag.
+              </video>
+              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white text-lg font-semibold ml-3 mt-3">Pep Talk</p>
+              </div>
+            </div>
+          
+            <div className="relative w-full md:w-1/4 h-[25rem] overflow-hidden group">
+              <video className="w-full h-full object-cover" src="/assets/vid1.mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white text-lg font-semibold ml-3 mt-3">Video Title</p>
+              </div>
+            </div>
+          
+            <div className="relative w-full md:w-1/4 h-auto overflow-hidden group">
+              <video className="w-full h-full object-cover" src="/assets/vid1.mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white text-lg font-semibold ml-3 mt-3">Video title</p>
+              </div>
+            </div>
+          
+            <div className="relative w-full md:w-2/4 h-auto overflow-hidden group">
+              <video className="w-full h-full object-cover" src="/assets/vid2.mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white text-lg font-semibold ml-3 mt-3">Video Title</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div ref={ref3} className="fade-in-section flex justify-center md:justify-end font-jost">
-          <VideoCard 
-            videoSrc="/assets/vid2.mp4"
-            title="Pep Talk" 
-            desc={description} 
-            flexDirection="row-reverse"
-            text="left" 
-          />
-        </div>
+
+
+
 
       </div>
     </>

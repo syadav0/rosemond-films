@@ -15,7 +15,8 @@ const VideoCard: React.FC<VideoCardProps> = ({videoSrc, title, desc, flexDirecti
     <div className={`shadow-md my-10 overflow-hidden md:px-20 md:mx-20 md:flex 
       ${flexDirection === 'row-reverse' ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
       <div className="md:shrink-0">
-        <video loop muted className="w-full h-64 object-cover md:w-[40rem] md:h-full">
+        <video loop muted  preload='auto' 
+        className="w-full h-64 object-cover md:w-[40rem] md:h-full">
           <source src={videoSrc} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
