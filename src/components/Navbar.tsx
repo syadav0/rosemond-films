@@ -15,16 +15,15 @@ const Navbar = () => {
       <div className="flex flex-wrap items-center justify-between mx-auto px-3 max-w-screen-2xl">
         <div className="flex items-center justify-between w-full md:w-auto">
           <div className="block md:hidden">
-            <button onClick={toggleMenu} className="flex items-center px-3 py-2 border 
-            rounded hover:border-white">
-              <svg className="fill-current h-3 w-3" viewBox="0 0 20 20"
+            <button onClick={toggleMenu} className="flex items-center px-3 py-2hover:border-white">
+              <svg className="fill-current h-5 w-5" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <title>Menu</title>
                 <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-6z" />
               </svg>
             </button>
           </div>
-          <a href="/" className="text-xl md:hover:text-indigo-400 transition ease-in-out">
+          <a href="/" className="text-2xl md:hover:text-indigo-400 transition ease-in-out">
             Rosemond Films
           </a>
         </div>
@@ -35,7 +34,7 @@ const Navbar = () => {
           <ul className={`font-medium flex flex-col items-center justify-center space-y-8 pt-10 sm:pt-0`}>
             <li>
               <Link href={"#films"} legacyBehavior>
-                <a onClick={toggleMenu} className='text-white text-lg hover:bg-transparent 
+                <a onClick={toggleMenu} className='text-white text-xl hover:bg-transparent 
                 hover:text-indigo-400 md:p-0 transition ease-in-out'>
                   Films
                 </a>
@@ -44,7 +43,7 @@ const Navbar = () => {
 
             <li>
               <Link href={"#about"} legacyBehavior>
-                <a onClick={toggleMenu} className='text-white text-lg hover:bg-transparent 
+                <a onClick={toggleMenu} className='text-white text-xl hover:bg-transparent 
               hover:text-indigo-400 md:p-0 transition ease-in-out'>
                   About
                 </a>
@@ -53,7 +52,7 @@ const Navbar = () => {
 
             <li>
               <Link href={"/contact"} legacyBehavior>
-                <a onClick={toggleMenu} className='text-white text-lg hover:bg-transparent 
+                <a onClick={toggleMenu} className='text-white text-xl hover:bg-transparent 
               hover:text-indigo-400 md:p-0 transition ease-in-out'>
                   Contact
                 </a>
@@ -61,7 +60,7 @@ const Navbar = () => {
             </li>
 
             <li>
-              <button onClick={toggleMenu} className='text-white text-lg hover:bg-transparent hover:text-indigo-400 md:p-0 transition ease-in-out'>
+              <button onClick={toggleMenu} className='text-white text-xl hover:bg-transparent hover:text-indigo-400 md:p-0 transition ease-in-out'>
                 X
               </button>
             </li>
@@ -74,7 +73,7 @@ const Navbar = () => {
         <ul className="hidden md:flex flex-col mt-4 md:flex-row md:space-x-8 sm:mt-0 sm:border-0">
           <li>
             <Link href={"#films"} legacyBehavior>
-              <a href="films" className='text-white text-lg hover:bg-transparent 
+              <a href="films" className='text-white text-xl hover:bg-transparent 
               hover:text-indigo-400 md:p-0 transition ease-in-out'>
                 Films
               </a>
@@ -83,7 +82,7 @@ const Navbar = () => {
 
           <li>
             <Link href={"#about"} legacyBehavior scroll={false}>
-              <a className='text-white text-lg hover:bg-transparent 
+              <a className='text-white text-xl hover:bg-transparent 
               hover:text-indigo-400 md:p-0 transition ease-in-out'>
                 About
               </a>
@@ -92,7 +91,7 @@ const Navbar = () => {
 
           <li>
             <Link href={"/contact"} legacyBehavior>
-              <a className='text-white text-lg hover:bg-transparent 
+              <a className='text-white text-xl hover:bg-transparent 
               hover:text-indigo-400 md:p-0 transition ease-in-out'>
                 Contact
               </a>

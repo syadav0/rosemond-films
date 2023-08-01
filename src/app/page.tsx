@@ -34,7 +34,7 @@ export default function Home() {
 
           
           <video autoPlay loop muted className='z-0 h-[45rem] object-cover md:h-auto md:scale-100 w-full brightness-[0.80] overflow-hidden'>
-            <source src='/assets/vid1.mp4' type='video/mp4'/>
+            <source src='/assets/pfpfull.mp4' type='video/mp4'/>
             Your browser does not support the video tag.
           </video>
 
@@ -71,36 +71,37 @@ export default function Home() {
           <div className="flex flex-wrap gap-x-5 gap-y-5 justify-center">
             <div className="relative w-full md:w-2/4 h-[25rem] overflow-hidden group">
               
-              <video preload='auto' className="z-0 w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src='/assets/vid2.mp4'>
+              <video preload='auto' className="z-0 w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src='/assets/peptalk.mp4'>
                 Your browser does not support the video tag.
               </video>
 
               <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white text-lg font-semibold ml-3 mt-3">Pep Talk</p>
+                <p className="text-white text-2xl mt-3">Pep Talk</p>
               </div>
 
             </div>
           
             <div className="relative w-full md:w-1/4 h-[25rem] overflow-hidden group">
               
-              <video preload='auto' className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src="/assets/vid1.mp4">
+              <video preload='auto' 
+              className="w-full h-full object-cover scale-125 group-hover:scale-150 ease-in-out duration-300 cursor-pointer" src="/assets/pandemus.mp4">
                 Your browser does not support the video tag.
               </video>
               
               <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white text-lg font-semibold ml-3 mt-3">Video Title</p>
+                <p className="text-white text-2xl mt-3">Pandemus</p>
               </div>
 
             </div>
           
             <div className="relative w-full md:w-1/4 h-auto overflow-hidden group">
               
-              <video preload='auto' className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src="/assets/vid1.mp4">
+              <video preload='auto' className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src="/assets/pfpshort.mp4">
                 Your browser does not support the video tag.
               </video>
               
               <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white text-lg font-semibold ml-3 mt-3">
+                <p className="text-white text-2xl mt-3">
                   Push for Progress 
                 </p>
               </div>
@@ -109,19 +110,19 @@ export default function Home() {
           
             <div className="relative w-full md:w-2/4 h-auto overflow-hidden group">
               
-              <video preload='auto' className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src="/assets/vid2.mp4">
+              <video preload='auto' className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src="/assets/peptalk.mp4">
                 Your browser does not support the video tag.
               </video>
 
               <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white text-lg font-semibold ml-3 mt-3">Video Title</p>
+                <p className="text-white text-2xl mt-3">Video Title</p>
               </div>
 
             </div>
           </div>
         </div>
 
-        <button className="p-3 m-5 hover:bg-white hover:text-slate-925 ease-in-out duration-300 border-[2px] text-white font-jost text-xl mb-40" type="submit">
+        <button className="p-3 m-5 hover:bg-white hover:text-slate-925 ease-in-out duration-500 border-[2px] text-white font-jost text-xl mb-40" type="submit">
           View More Films
         </button>
 
