@@ -2,26 +2,24 @@ import Link from "next/link";
 
 export default function Contact() {
   return (
-      <div className='text-center font-jost'>
+      <div className='text-center font-jost px-10'>
         
         <form className="h-screen grid justify-center items-center">
 
           <div className="grid gap-6" id="form">
 
-            <h1 className="text-2xl text-white">Contact</h1>
+            <h1 className="text-3xl text-white">Contact</h1>
 
-            <div className="w-full flex gap-3">
+            <div className="flex gap-3 w-[30rem] text-xl">
               
-              <input className="capitalize shadow-2xl p-3 ex w-full outline-none focus:border-solid focus:border-[#035ec5] border-[1px]" type="text" placeholder="First Name" id="First-Name" name="First-Name" required />
-              
-              <input className="p-3 capitalize shadow-2xl glass w-full outline-none focus:border-solid focus:border-[#035ec5] border-[1px]" type="text" placeholder="Last Name" id="Last-Name" name="Last-Name" /> 
+              <input className="capitalize shadow-2xl p-3 ex w-full outline-none focus:border-solid focus:border-[#035ec5] border-[1px]" type="text" placeholder="Full Name" id="Full-Name" name="Full-Name" required />
             </div>
 
-            <div className="grid gap-6 w-full">
+            <div className="grid gap-6 w-full text-xl">
               <input className="p-3 shadow-2xl glass w-full outline-none focus:border-solid focus:border-[#035ec5] border-[1px]" type="Email" placeholder="Email" id="Email" name="email" /> 
             </div>
           
-            <div className="flex gap-3 h-[10rem]">
+            <div className="flex gap-3 h-[10rem] text-xl">
               <textarea className="p-3 shadow-2xl glass w-full outline-none focus:border-solid focus:border-[#035ec5] border-[1px]" placeholder="Message">
               </textarea>
             </div>
