@@ -47,7 +47,7 @@ export default function Home() {
           <div className='sm:w-3/4 w-11/12 flex items-center flex-col lg:flex-row p-7 lg:px-20 mx-auto lg:divide-x-4 lg:divide-slate-500 divide'>
           
             <div className='flex-shrink-0 mb-4 md:mb-0 md:mr-5'>
-              <Image src={'/assets/pic1.jpg'} alt='profile picture' width={250} 
+              <Image src={'/assets/jfinsq.jpg'} alt='profile picture' width={250} 
               height={250} className='rounded-full'/>
             </div>
           
