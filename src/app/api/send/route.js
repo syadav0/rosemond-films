@@ -1,11 +1,5 @@
 import sg from "@sendgrid/mail";
 
-export const config = {
-  api: {
-    bodyParser: true,
-  },
-};
-
 export async function POST(req, res) {
   sg.setApiKey(process.env.SENDGRID_API_KEY);
   const to_e = process.env.TO_EMAIL;
