@@ -4,8 +4,6 @@ import { useRef } from 'react';
 import Image from 'next/image';
 import useFadeIn from '@/components/FadeIn';
 
-const description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-
 export default function Home() {
   
   const ref1 = useRef<HTMLDivElement>(null);
@@ -33,7 +31,7 @@ export default function Home() {
           </svg>
 
           
-          <video autoPlay loop muted className='z-0 h-[45rem] object-cover md:h-auto md:scale-100 w-full brightness-[0.80] overflow-hidden'>
+          <video autoPlay playsInline loop muted className='z-0 h-[45rem] object-cover md:h-auto md:scale-100 w-full brightness-[0.80] overflow-hidden'>
             <source src='/assets/pfpfull.mp4' type='video/mp4'/>
             Your browser does not support the video tag.
           </video>
@@ -64,7 +62,7 @@ export default function Home() {
 
         {/* Films section */}
         <div ref={ref2} className="inline-block p-5 font-jost fade-in-section">
-          <div id="about" className='mx-auto text-5xl font-jost m-10'>
+          <div className='mx-auto text-5xl font-jost m-10'>
             Films
           </div>
         

@@ -33,7 +33,7 @@ const Navbar = () => {
           
           <ul className={`font-medium flex flex-col items-center justify-center space-y-8 pt-10 sm:pt-0`}>
             <li>
-              <Link href={"#films"} legacyBehavior>
+              <Link href={"/films"} legacyBehavior>
                 <a onClick={toggleMenu} className='text-white text-xl hover:bg-transparent 
                 hover:text-indigo-400 md:p-0 transition ease-in-out'>
                   Films
@@ -72,7 +72,7 @@ const Navbar = () => {
         {/* Desktop view menu */}
         <ul className="hidden md:flex flex-col mt-4 md:flex-row md:space-x-8 sm:mt-0 sm:border-0">
           <li>
-            <Link href={"#films"} legacyBehavior>
+            <Link href={"/films"} legacyBehavior>
               <a href="films" className='text-white text-xl hover:bg-transparent 
               hover:text-indigo-400 md:p-0 transition ease-in-out'>
                 Films
@@ -81,7 +81,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Link href={"#about"} legacyBehavior scroll={false}>
+            <Link href={"#about"} legacyBehavior>
               <a className='text-white text-xl hover:bg-transparent 
               hover:text-indigo-400 md:p-0 transition ease-in-out'>
                 About
