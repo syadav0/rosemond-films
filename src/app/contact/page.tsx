@@ -1,26 +1,75 @@
+'use client'
+import { useState } from 'react';
 import Link from "next/link";
 
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [msg, setMsg] = useState("");
+
+  const [errors, setErrors] = useState("");
+
+  const handleValidation = () => {
+    let tempErrors: any = {};
+    let isValid = true;
+
+    if (name.length <= 0) {
+      tempErrors["name"] = true;
+      isValid = false;
+    }
+    if (email.length <= 0) {
+      tempErrors["email"] = true;
+      isValid = false;
+    }
+    if (msg.length <= 0) {
+      tempErrors["msg"] = true;
+      isValid = false;
+    }
+
+    setErrors({ ...tempErrors });
+    console.log("errors", tempErrors);
+    return isValid;
+  }
+
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+
+    let isValidForm = handleValidation();
+    
+    if (isValidForm) {
+      try { 
+        const res = await fetch('/api', {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            msg: msg,
+          }),
+        });
+      } catch(err) {
+        console.log(err);
+        console.log(name, email, msg);
+      }
+    }
+  };
+  
   return (
       <div className='text-center font-jost px-10'>
-        
-        <form className="h-screen grid justify-center items-center">
-
+        <form className="h-screen grid justify-center items-center" onSubmit={handleSubmit}>
           <div className="grid gap-6" id="form">
-
             <h1 className="text-3xl text-white">Contact</h1>
-
             <div className="flex gap-3 w-[30rem] text-xl">
               
-              <input className="capitalize shadow-2xl p-3 ex w-full outline-none focus:border-solid focus:border-[#035ec5] border-[1px]" type="text" placeholder="Full Name" id="Full-Name" name="Full-Name" required />
+              <input className="capitalize shadow-2xl p-3 ex w-full outline-none focus:border-solid focus:border-[#035ec5] border-[1px]" type="text" placeholder="Name" id="name" name="name" required onChange={(e) => setName(e.target.value)} value={name} />
             </div>
 
             <div className="grid gap-6 w-full text-xl">
-              <input className="p-3 shadow-2xl glass w-full outline-none focus:border-solid focus:border-[#035ec5] border-[1px]" type="Email" placeholder="Email" id="Email" name="email" /> 
+              <input className="p-3 shadow-2xl glass w-full outline-none focus:border-solid focus:border-[#035ec5] border-[1px]" type="Email" placeholder="Email" id="email" name="email" required onChange={(e) => setEmail(e.target.value)} value={email} /> 
             </div>
           
-            <div className="flex gap-3 h-[10rem] text-xl">
-              <textarea className="p-3 shadow-2xl glass w-full outline-none focus:border-solid focus:border-[#035ec5] border-[1px]" placeholder="Message">
+            <div className="flex gap-3 h-[20rem] text-xl">
+              <textarea className="p-3 shadow-2xl glass w-full outline-none focus:border-solid focus:border-[#035ec5] border-[1px] resize-none" placeholder="Message" id="msg" name='msg' required onChange={(e) => setMsg(e.target.value)} value={msg}>
               </textarea>
             </div>
           
@@ -46,10 +95,9 @@ export default function Contact() {
               </Link>
             </div>
           </div>
-
-
         </form>
 
       </div>
   )
 }
+
