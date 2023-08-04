@@ -18,7 +18,7 @@ export default function Contact() {
         msg: msg,
       };
       
-      const response: any = await fetch('/api/send', {
+      const response = await fetch('/api/send', {
         method: "POST",
         body: JSON.stringify(data),
         headers: { 
@@ -27,13 +27,12 @@ export default function Contact() {
         },
       });
 
-      response.then(async (res: any) => {
-        if (res.status == 200) {
-          console.log("Email sent sucessfully!");
-        } else {
-          console.log("Error sending email: " + response.status);
-        }
-      });
+      if (response.status == 200) {
+        console.log("Sent");
+      } else {
+        const error = await response.json()
+        console.log("not sent: " + error.message);
+      }
     } catch(err) {
       console.log(err);
     }
