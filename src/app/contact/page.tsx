@@ -9,17 +9,30 @@ export default function Contact() {
 
   const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    console.log(name, email, msg);
+    // console.log(name, email, msg);
+
     try { 
-      await fetch('/api/send', {
+      const data = {
+        name: name, 
+        email: email, 
+        msg: msg,
+      };
+      
+      const response: any = await fetch('/api/send', {
         method: "POST",
-        headers: { "Content-Type": "application/json",
-        Accept: "application/json", },
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          msg: msg,
-        }),
+        body: JSON.stringify(data),
+        headers: { 
+          "Content-Type": "application/json",
+          "Accept": "application/json", 
+        },
+      });
+
+      response.then(async (res: any) => {
+        if (res.status == 200) {
+          console.log("Email sent sucessfully!");
+        } else {
+          console.log("Error sending email: " + response.status);
+        }
       });
     } catch(err) {
       console.log(err);
