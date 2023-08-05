@@ -11,7 +11,7 @@ export async function POST(req: Request) {
     const data = await req.json();
     const { name, email, msg } = data;
     
-    console.log(name, email, msg);
+    console.log(name, email, msg, to_e, from_e);
     await sg.send({
       to: to_e,
       from: from_e,
