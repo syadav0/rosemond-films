@@ -18,21 +18,14 @@ export default function Contact() {
         msg: msg,
       };
       
-      const response = await fetch('/api/send', {
+      return fetch('/api/send', {
         method: "POST",
-        body: JSON.stringify(data),
         headers: { 
           "Content-Type": "application/json",
           "Accept": "application/json", 
         },
+        body: JSON.stringify(data),
       });
-
-      if (response.status == 200) {
-        console.log("Sent");
-      } else {
-        const error = await response.json()
-        console.log("not sent: " + error.message);
-      }
     } catch(err) {
       console.log(err);
     }
@@ -48,7 +41,7 @@ export default function Contact() {
 
             <div className="flex gap-3 w-[30rem] text-xl">
               
-              <input className="capitalize shadow-2xl p-3 ex w-full outline-none focus:border-solid focus:border-[#035ec5] border-[1px]" 
+              <input className="shadow-2xl p-3 ex w-full outline-none focus:border-solid focus:border-[#035ec5] border-[1px]" 
               type="text" 
               placeholder="Name" 
               required 
