@@ -9,7 +9,6 @@ export default function Contact() {
 
   const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    // console.log(name, email, msg);
 
     try { 
       const data = {
@@ -18,7 +17,7 @@ export default function Contact() {
         msg: msg,
       };
       
-      return fetch('/api/send', {
+      await fetch('/api/send', {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",
@@ -65,7 +64,7 @@ export default function Contact() {
               </textarea>
             </div>
             
-            <button className="glass w-full p-3 hover:bg-white hover:text-black ease-in-out duration-300 border-[2px] text-white font-jost text-xl" type="submit" onClick={() => console.log('Button Clicked')}>
+            <button className="glass w-full p-3 hover:bg-white hover:text-black ease-in-out duration-300 border-[2px] text-white font-jost text-xl" type="submit">
               Submit
             </button>
 

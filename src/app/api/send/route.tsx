@@ -19,11 +19,10 @@ export async function POST(req: Request) {
       html: `<h4> ${name} has sent a message, their email is ${email}.</h4> 
       <br> Message: ${msg}`,
     });
-
-    return NextResponse.json({ message: "This worked", success: true});
+    return NextResponse.json({ message: "Yes", success: true});
   } catch (err) {
-    console.log("Failed");
-    return NextResponse.json({ message: err, success: false});
+    console.log(err);
+    NextResponse.json({ message: err, success: false});
   };
 
 };
