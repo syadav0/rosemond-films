@@ -11,14 +11,14 @@ export async function POST(req: Request) {
     const data = await req.json();
     const { name, email, msg } = data;
     
-    console.log(name, email, msg, to_e, from_e);
-    await sg.send({
-      to: to_e,
-      from: from_e,
-      subject: `${name} has sent a message from your site!`,
-      html: `<h4> ${name} has sent a message, their email is ${email}.</h4> 
-      <br> Message: ${msg}`,
-    });
+    console.log(name, email, msg);
+    // await sg.send({
+    //   to: to_e,
+    //   from: from_e,
+    //   subject: `${name} has sent a message from your site!`,
+    //   html: `<h4> ${name} has sent a message, their email is ${email}.</h4> 
+    //   <br> Message: ${msg}`,
+    // });
     return NextResponse.json({ message: "Yes", success: true});
   } catch (err) {
     console.log(err);
