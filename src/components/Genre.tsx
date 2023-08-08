@@ -5,9 +5,10 @@ import { Dialog, Transition } from '@headlessui/react';
 
 interface GenreProps {
   title: string;
+  bgImg: any;
 }
 
-const GenreCard: React.FC<GenreProps> = ({ title }) => {
+const GenreCard: React.FC<GenreProps> = ({ title, bgImg }) => {
   let [isOpen, setIsOpen] = useState(false);
   
   function closeModal() {
@@ -21,7 +22,7 @@ const GenreCard: React.FC<GenreProps> = ({ title }) => {
   return (
     <>
       <button type='button' onClick={openModal}>
-        <div className="flex flex-col-reverse h-96 group bg-slate-400 hover:bg-indigo-300 duration-300 object-cover">
+        <div className={`flex flex-col-reverse h-96 duration-300 hover:bg-[95%] bg-cover group`} style={ {backgroundImage: `url('${bgImg}')`} }>
           <div className='h-1/4 bg-slate-700 text-white text-3xl flex justify-center items-center
             group-hover:h-1/3 duration-300'>
             <p className="font-jost font-white">{title}</p>
