@@ -47,7 +47,7 @@ export default function Home() {
           <div className='sm:w-3/4 w-11/12 flex items-center flex-col lg:flex-row p-7 lg:px-20 mx-auto lg:divide-x-4 lg:divide-slate-500 divide'>
           
             <div className='flex-shrink-0 mb-4 md:mb-0 md:mr-5'>
-              <Image src={'/assets/jfinsq.jpg'} alt='profile picture' width={250} 
+              <Image src={'/assets/images/jfinsq.jpg'} alt='profile picture' width={250} 
               height={250} className='rounded-full'/>
             </div>
           
@@ -69,7 +69,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-x-5 gap-y-5 justify-center">
             <div className="relative w-full md:w-2/4 h-[25rem] overflow-hidden group">
               
-              <video preload='auto' className="z-0 w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src='/assets/peptalk.mp4'>
+              <video preload='auto' className="z-0 w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src='/assets/peptalk.mp4' placeholder='/assets/images/loading.gif'>
                 Your browser does not support the video tag.
               </video>
 
@@ -82,7 +82,7 @@ export default function Home() {
             <div className="relative w-full md:w-1/4 h-[25rem] overflow-hidden group">
               
               <video preload='auto' 
-              className="w-full h-full object-cover scale-125 group-hover:scale-150 ease-in-out duration-300 cursor-pointer" src="/assets/pandemus.mp4">
+              className="w-full h-full object-cover scale-125 group-hover:scale-150 ease-in-out duration-300 cursor-pointer" src="/assets/pandemus.mp4" placeholder='/assets/images/loading.gif'>
                 Your browser does not support the video tag.
               </video>
               
@@ -94,7 +94,7 @@ export default function Home() {
           
             <div className="relative w-full md:w-1/4 h-auto overflow-hidden group">
               
-              <video preload='auto' className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src="/assets/pfpshort.mp4">
+              <video preload='auto' className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src="/assets/pfpshort.mp4" placeholder='/assets/images/loading.gif'>
                 Your browser does not support the video tag.
               </video>
               
@@ -108,7 +108,7 @@ export default function Home() {
           
             <div className="relative w-full md:w-2/4 h-auto overflow-hidden group">
               
-              <video preload='auto' className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src="/assets/peptalk.mp4">
+              <video preload='auto' className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-300 cursor-pointer" src="/assets/peptalk.mp4" placeholder='/assets/images/loading.gif'>
                 Your browser does not support the video tag.
               </video>
 

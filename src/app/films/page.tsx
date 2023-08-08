@@ -1,4 +1,4 @@
-import GenreCard from "@/components/Genre"
+import GenreCard from "@/components/Genre";
 
 export default function Films() {
   
@@ -6,7 +6,10 @@ export default function Films() {
     
     <div className="mt-10 h-screen">
       <div className='grid grid-cols-1 md:grid-cols-2 gap-10 w-3/4 mx-auto'>
-        <GenreCard title="Short Stories"/>
+        
+        <GenreCard title="Short Stories" />
+
+
         <GenreCard title="Advertisement"/>
         <GenreCard title="Activism"/>
         <GenreCard title="Genre 4"/>
