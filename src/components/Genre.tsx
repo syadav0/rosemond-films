@@ -38,7 +38,7 @@ const GenreCard: React.FC<GenreProps> = ({ title, bgImg }) => {
             leave='ease-in duration-300' leaveFrom='opacity-100' 
             leaveTo='opacity-0'>
             
-              <div className='fixed inset-0 bg-black bg-opacity-50'/>
+              <div className='fixed inset-0 bg-black bg-opacity-70'/>
 
           </Transition.Child>
 
@@ -49,7 +49,7 @@ const GenreCard: React.FC<GenreProps> = ({ title, bgImg }) => {
                 leave="ease-in duration-200" leaveFrom="opacity-100 scale-100" 
                 leaveTo="opacity-0 scale-95">
                 
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden bg-slate-925 p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="transform w-5/6 h-[80%] overflow-hidden bg-slate-925 p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-white">
                     {title}
                   </Dialog.Title>
