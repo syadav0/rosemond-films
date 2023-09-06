@@ -4,4 +4,5 @@ Currently deployed at: https://rosemond-films-syadav0.vercel.app/
 
 ## TODO
 - Revamp about section
-- Change domains
+- Update domain
+- Change favicon
